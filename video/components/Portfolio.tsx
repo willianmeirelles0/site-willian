@@ -1,19 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import FadeIn from "./FadeIn";
 import { portfolioCategories, portfolioItems } from "@/lib/portfolio";
+import FilmStripGraphic from "./graphics/FilmStripGraphic";
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] =
     useState<(typeof portfolioCategories)[number]>("Todos");
+  const scrollerRef = useRef<HTMLDivElement>(null);
 
   const filteredItems = portfolioItems.filter(
     (item) => activeCategory === "Todos" || item.categoria === activeCategory
   );
 
+  useEffect(() => {
+    scrollerRef.current?.scrollTo({ left: 0 });
+  }, [activeCategory]);
+
+  function scrollByAmount(direction: 1 | -1) {
+    scrollerRef.current?.scrollBy({ left: direction * 300, behavior: "smooth" });
+  }
+
   return (
-    <section className="border-b border-border px-6 py-24 sm:px-10 sm:py-32">
+    <section className="relative isolate overflow-hidden border-b border-border px-6 py-24 sm:px-10 sm:py-32">
+      <FilmStripGraphic className="pointer-events-none absolute -right-6 top-0 -z-10 hidden h-full w-[80px] opacity-70 lg:block" />
       <div className="mx-auto max-w-content">
         <FadeIn className="max-w-2xl">
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-blue-light">
@@ -45,10 +56,16 @@ export default function Portfolio() {
           ))}
         </FadeIn>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredItems.map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.08}>
-              <div className="overflow-hidden rounded-2xl border border-border bg-surface1">
+        <FadeIn delay={0.15} className="mt-12">
+          <div
+            ref={scrollerRef}
+            className="hide-scrollbar flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2"
+          >
+            {filteredItems.map((item) => (
+              <div
+                key={item.id}
+                className="w-[210px] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-surface1 sm:w-[250px]"
+              >
                 <div className="aspect-[9/16] w-full">
                   <iframe
                     src={item.embedUrl}
@@ -58,17 +75,36 @@ export default function Portfolio() {
                     allowFullScreen
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-5">
                   <span className="text-xs font-medium uppercase tracking-[0.15em] text-blue-light">
                     {item.categoria}
                   </span>
-                  <h3 className="mt-2 text-base font-medium text-white">
+                  <h3 className="mt-2 text-sm font-medium text-white">
                     {item.titulo}
                   </h3>
                 </div>
               </div>
-            </FadeIn>
-          ))}
+            ))}
+          </div>
+        </FadeIn>
+
+        <div className="mt-6 flex justify-end gap-3">
+          <button
+            type="button"
+            onClick={() => scrollByAmount(-1)}
+            aria-label="Vídeo anterior"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-white transition-colors duration-200 hover:border-blue hover:text-blue-light"
+          >
+            &#8592;
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollByAmount(1)}
+            aria-label="Próximo vídeo"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-white transition-colors duration-200 hover:border-blue hover:text-blue-light"
+          >
+            &#8594;
+          </button>
         </div>
       </div>
     </section>

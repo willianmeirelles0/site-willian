@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import TrendGraphic from "@/components/graphics/TrendGraphic";
+import LensGraphic from "@/components/graphics/LensGraphic";
 
 const TRAFEGO_URL = "https://trafego.willianmeirelles.com.br";
 const VIDEO_URL = "https://video.willianmeirelles.com.br";
@@ -11,11 +13,13 @@ const banners = [
     label: "Gestão de Tráfego Pago",
     phrase:
       "Estratégia, dados e precisão para transformar investimentos em resultados concretos.",
+    Graphic: TrendGraphic,
   },
   {
     href: VIDEO_URL,
     label: "Produção Audiovisual",
     phrase: "Imagem que comunica autoridade antes mesmo de você falar.",
+    Graphic: LensGraphic,
   },
 ];
 
@@ -30,7 +34,7 @@ export default function HubPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 + index * 0.1, ease: "easeOut" }}
-            className="group relative flex flex-1 flex-col justify-between border-t border-border p-10 transition-colors duration-300 hover:bg-surface1 sm:p-14 md:border-t-0 md:p-16"
+            className="group relative isolate flex flex-1 flex-col justify-between overflow-hidden border-t border-border p-10 transition-colors duration-300 hover:bg-surface1 sm:p-14 md:border-t-0 md:p-16"
             style={
               index === 0
                 ? { borderRight: "1px solid rgba(255,255,255,0.07)" }
@@ -38,6 +42,8 @@ export default function HubPage() {
             }
           >
             <div className="pointer-events-none absolute inset-0 border border-transparent transition-colors duration-300 group-hover:border-blue/40" />
+
+            <banner.Graphic className="pointer-events-none absolute -bottom-16 -right-16 -z-10 hidden h-[380px] w-[380px] sm:block" />
 
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-muted">

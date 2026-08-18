@@ -16,7 +16,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: "JVPuFMmX-gQ",
     embedUrl: "https://www.youtube.com/embed/JVPuFMmX-gQ",
     titulo: "LB Interiores",
-    categoria: "Produtos",
+    categoria: "Corporativo",
   },
   {
     id: "atCNskVh9Ao",
@@ -31,16 +31,16 @@ export const portfolioItems: PortfolioItem[] = [
     categoria: "Institucional",
   },
   {
-    id: "d61CjB1xQ20",
-    embedUrl: "https://www.youtube.com/embed/d61CjB1xQ20",
-    titulo: "PowerX",
-    categoria: "Corporativo",
-  },
-  {
     id: "w00r73rBaJQ",
     embedUrl: "https://www.youtube.com/embed/w00r73rBaJQ",
     titulo: "Casa da Serra Restaurante",
     categoria: "Gastronomia",
+  },
+  {
+    id: "d61CjB1xQ20",
+    embedUrl: "https://www.youtube.com/embed/d61CjB1xQ20",
+    titulo: "PowerX",
+    categoria: "Corporativo",
   },
   {
     id: "5YXeTwuPYuk",

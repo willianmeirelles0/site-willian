@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
+import LensGraphic from "./graphics/LensGraphic";
 
 export default function Hero() {
   return (
-    <section className="border-b border-border px-6 py-24 sm:px-10 sm:py-32 lg:py-40">
+    <section className="relative isolate overflow-hidden border-b border-border px-6 py-24 sm:px-10 sm:py-32 lg:py-40">
+      <LensGraphic className="pointer-events-none absolute -right-20 -top-20 -z-10 hidden h-[420px] w-[420px] md:block" />
       <div className="mx-auto max-w-content">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}

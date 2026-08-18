@@ -1,9 +1,11 @@
 import FadeIn from "./FadeIn";
 import AnimatedCounter from "./AnimatedCounter";
+import BarsGraphic from "./graphics/BarsGraphic";
 
 export default function Stats() {
   return (
-    <section className="border-b border-border px-6 py-24 sm:px-10 sm:py-32">
+    <section className="relative isolate overflow-hidden border-b border-border px-6 py-24 sm:px-10 sm:py-32">
+      <BarsGraphic className="pointer-events-none absolute -bottom-6 -left-10 -z-10 hidden h-[200px] w-[320px] lg:block" />
       <div className="mx-auto max-w-content">
         <FadeIn className="max-w-2xl">
           <span className="text-sm font-medium uppercase tracking-[0.2em] text-blue-light">
