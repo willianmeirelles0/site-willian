@@ -23,8 +23,8 @@ export default function Portfolio() {
             Trabalhos em produção
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted">
-            Estrutura de portfólio pronta para receber os vídeos finais. As
-            peças abaixo demonstram o layout de exibição.
+            Uma seleção de trabalhos entregues. Novas peças são adicionadas
+            aqui conforme os projetos são concluídos.
           </p>
         </FadeIn>
 
@@ -45,11 +45,11 @@ export default function Portfolio() {
           ))}
         </FadeIn>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item, index) => (
             <FadeIn key={item.id} delay={index * 0.08}>
               <div className="overflow-hidden rounded-2xl border border-border bg-surface1">
-                <div className="aspect-video w-full">
+                <div className="aspect-[9/16] w-full">
                   <iframe
                     src={item.embedUrl}
                     title={item.titulo}

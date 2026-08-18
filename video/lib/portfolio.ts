@@ -13,16 +13,40 @@ export type PortfolioItem = {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    id: "placeholder-1",
-    embedUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
-    titulo: "Captação institucional, exemplo de layout",
+    id: "JVPuFMmX-gQ",
+    embedUrl: "https://www.youtube.com/embed/JVPuFMmX-gQ",
+    titulo: "LB Interiores",
+    categoria: "Produtos",
+  },
+  {
+    id: "atCNskVh9Ao",
+    embedUrl: "https://www.youtube.com/embed/atCNskVh9Ao",
+    titulo: "Casa da Serra Restaurante",
+    categoria: "Gastronomia",
+  },
+  {
+    id: "XjpHuT6hwWg",
+    embedUrl: "https://www.youtube.com/embed/XjpHuT6hwWg",
+    titulo: "Willian Meirelles",
     categoria: "Institucional",
   },
   {
-    id: "placeholder-2",
-    embedUrl: "https://www.youtube.com/embed/R6MlUcmOul8",
-    titulo: "Captação corporativa, exemplo de layout",
+    id: "d61CjB1xQ20",
+    embedUrl: "https://www.youtube.com/embed/d61CjB1xQ20",
+    titulo: "PowerX",
     categoria: "Corporativo",
+  },
+  {
+    id: "w00r73rBaJQ",
+    embedUrl: "https://www.youtube.com/embed/w00r73rBaJQ",
+    titulo: "Casa da Serra Restaurante",
+    categoria: "Gastronomia",
+  },
+  {
+    id: "5YXeTwuPYuk",
+    embedUrl: "https://www.youtube.com/embed/5YXeTwuPYuk",
+    titulo: "Casa da Serra Restaurante",
+    categoria: "Gastronomia",
   },
 ];
 
