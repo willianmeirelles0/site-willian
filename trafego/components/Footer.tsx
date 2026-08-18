@@ -33,6 +33,14 @@ export default function Footer({
             >
               trafego@willianmeirelles.com.br
             </a>
+            <a
+              href="https://www.instagram.com/owillianmeirelles/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 block text-sm text-muted transition-colors duration-200 hover:text-blue-light"
+            >
+              @owillianmeirelles
+            </a>
           </div>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-muted">

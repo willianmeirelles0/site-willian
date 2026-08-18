@@ -27,6 +27,20 @@ export default function Footer({
             >
               +55 54 99316 6996
             </a>
+            <a
+              href="mailto:videomaker@willianmeirelles.com.br"
+              className="mt-1 block text-sm text-muted transition-colors duration-200 hover:text-blue-light"
+            >
+              videomaker@willianmeirelles.com.br
+            </a>
+            <a
+              href="https://www.instagram.com/meirelles.videomaker/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 block text-sm text-muted transition-colors duration-200 hover:text-blue-light"
+            >
+              @meirelles.videomaker
+            </a>
           </div>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-muted">
