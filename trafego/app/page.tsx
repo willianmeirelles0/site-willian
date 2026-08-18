@@ -6,6 +6,7 @@ import Platforms from "@/components/Platforms";
 import Stats from "@/components/Stats";
 import AudienceFit from "@/components/AudienceFit";
 import Niches from "@/components/Niches";
+import Testimonials from "@/components/Testimonials";
 import Exclusivity from "@/components/Exclusivity";
 import FAQ from "@/components/FAQ";
 import LeadForm from "@/components/LeadForm";
@@ -35,10 +36,16 @@ export default function TrafegoPage() {
       <Stats />
       <AudienceFit />
       <Niches />
+      <Testimonials />
       <Exclusivity />
       <FAQ
         eyebrow="Perguntas frequentes"
-        title="Dúvidas comuns sobre gestão de tráfego pago"
+        title={
+          <>
+            Dúvidas comuns sobre
+            <br className="hidden lg:block" /> gestão de tráfego pago
+          </>
+        }
         items={trafegoFaq}
       />
       <LeadForm

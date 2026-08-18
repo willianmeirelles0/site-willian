@@ -8,6 +8,8 @@ const platforms = [
   "LinkedIn Ads",
 ];
 
+const loop = [...platforms, ...platforms];
+
 export default function Platforms() {
   return (
     <section className="border-b border-border bg-surface1/30 px-6 py-24 sm:px-10 sm:py-32">
@@ -17,19 +19,26 @@ export default function Platforms() {
             Plataformas
           </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Presença estratégica onde seu cliente está
+            Presença estratégica
+            <br className="hidden lg:block" /> onde seu cliente está
           </h2>
         </FadeIn>
 
-        <div className="mt-14 flex flex-wrap gap-4">
-          {platforms.map((platform, index) => (
-            <FadeIn key={platform} delay={index * 0.06}>
-              <span className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium text-subtle transition-colors duration-300 hover:border-blue/50 hover:text-white">
-                {platform}
-              </span>
-            </FadeIn>
-          ))}
-        </div>
+        <FadeIn delay={0.15} className="mt-14">
+          <div className="relative overflow-hidden rounded-full border border-border bg-surface1 py-4">
+            <div className="flex w-max animate-marquee gap-10 whitespace-nowrap pl-10">
+              {loop.map((platform, index) => (
+                <span
+                  key={`${platform}-${index}`}
+                  className="flex items-center gap-10 text-sm font-medium text-subtle"
+                >
+                  {platform}
+                  <span className="text-blue">&#8226;</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

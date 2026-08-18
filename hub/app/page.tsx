@@ -21,18 +21,7 @@ const banners = [
 
 export default function HubPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-bg">
-      <motion.header
-        initial={{ opacity: 0, y: -16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="flex items-center justify-center py-14 sm:py-20"
-      >
-        <h1 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-          Willian Meirelles
-        </h1>
-      </motion.header>
-
+    <main className="flex h-screen flex-col bg-bg">
       <div className="flex flex-1 flex-col md:flex-row">
         {banners.map((banner, index) => (
           <motion.a
@@ -40,8 +29,8 @@ export default function HubPage() {
             href={banner.href}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 + index * 0.1, ease: "easeOut" }}
-            className="group relative flex min-h-[46vh] flex-1 flex-col justify-between border-t border-border p-10 transition-colors duration-300 hover:bg-surface1 sm:p-14 md:min-h-screen md:border-t-0 md:p-16"
+            transition={{ duration: 0.7, delay: 0.1 + index * 0.1, ease: "easeOut" }}
+            className="group relative flex flex-1 flex-col justify-between border-t border-border p-10 transition-colors duration-300 hover:bg-surface1 sm:p-14 md:border-t-0 md:p-16"
             style={
               index === 0
                 ? { borderRight: "1px solid rgba(255,255,255,0.07)" }
@@ -50,9 +39,14 @@ export default function HubPage() {
           >
             <div className="pointer-events-none absolute inset-0 border border-transparent transition-colors duration-300 group-hover:border-blue/40" />
 
-            <span className="text-sm font-medium uppercase tracking-[0.2em] text-muted">
-              {String(index + 1).padStart(2, "0")}
-            </span>
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-muted">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-muted">
+                Willian Meirelles
+              </span>
+            </div>
 
             <div className="max-w-md">
               <h2 className="mb-5 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">

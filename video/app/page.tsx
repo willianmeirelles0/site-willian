@@ -34,7 +34,12 @@ export default function VideoPage() {
       <Testimonials />
       <FAQ
         eyebrow="Perguntas frequentes"
-        title="Dúvidas comuns sobre a produção audiovisual"
+        title={
+          <>
+            Dúvidas comuns sobre
+            <br className="hidden lg:block" /> a produção audiovisual
+          </>
+        }
         items={videoFaq}
       />
       <LeadForm

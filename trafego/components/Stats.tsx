@@ -29,7 +29,7 @@ export default function Stats() {
           <FadeIn delay={0.1}>
             <div className="border-t border-border pt-6">
               <span className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                [X]%
+                <AnimatedCounter value={800} suffix="%" />
               </span>
               <p className="mt-4 text-sm leading-relaxed text-muted">
                 ROI médio entregue nas campanhas geridas
@@ -40,7 +40,7 @@ export default function Stats() {
           <FadeIn delay={0.2}>
             <div className="border-t border-border pt-6">
               <span className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                [X]+
+                <AnimatedCounter value={40} suffix="+" />
               </span>
               <p className="mt-4 text-sm leading-relaxed text-muted">
                 empresas atendidas
@@ -51,7 +51,7 @@ export default function Stats() {
           <FadeIn delay={0.3}>
             <div className="border-t border-border pt-6">
               <span className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                R$[X] Mi+
+                <AnimatedCounter value={9} prefix="R$" suffix=" Milhões" />
               </span>
               <p className="mt-4 text-sm leading-relaxed text-muted">
                 movimentados em faturamento para clientes

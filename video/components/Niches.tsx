@@ -8,6 +8,9 @@ const niches = [
   "Lojas de Móveis Planejados",
   "Palestrantes e Mentores",
   "Feiras de Negócios",
+  "Indústrias",
+  "Energia Solar",
+  "Vinícolas",
   "Profissionais que entendem que imagem constrói autoridade",
 ];
 

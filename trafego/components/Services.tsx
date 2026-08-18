@@ -26,6 +26,11 @@ const services = [
     description:
       "Relatórios claros e objetivos para acompanhar o impacto de cada investimento.",
   },
+  {
+    title: "Suporte Remoto Nacional",
+    description:
+      "Auxílio na roteirização de vídeos e orientação de captação para clientes de outros estados, com atendimento em todo o Brasil.",
+  },
 ];
 
 export default function Services() {
@@ -37,7 +42,8 @@ export default function Services() {
             Serviços
           </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Um processo completo, do diagnóstico ao resultado
+            Um processo completo
+            <br className="hidden lg:block" /> do diagnóstico ao resultado
           </h2>
         </FadeIn>
 

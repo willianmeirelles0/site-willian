@@ -11,6 +11,9 @@ const niches = [
   "Varejo",
   "Palestrantes e Mentores",
   "Feiras de Negócios",
+  "Indústrias",
+  "Energia Solar",
+  "Vinícolas",
   "Profissionais que entendem que imagem constrói autoridade",
 ];
 
@@ -36,6 +39,14 @@ export default function Niches() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn delay={0.4} className="mt-10 max-w-2xl">
+          <p className="text-sm leading-relaxed text-muted sm:text-base">
+            Não trabalho focado em um único nicho de mercado. O critério que
+            importa é outro: empresas dispostas a mudar a forma como enxergam
+            o marketing e a estruturar resultados concretos.
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

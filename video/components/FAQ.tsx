@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import FadeIn from "./FadeIn";
 
 type FaqItem = {
@@ -14,7 +14,7 @@ export default function FAQ({
   items,
 }: {
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   items: FaqItem[];
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

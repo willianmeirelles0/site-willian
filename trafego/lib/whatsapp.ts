@@ -16,7 +16,7 @@ export type LeadFormData = {
 
 export function buildLeadMessage(data: LeadFormData) {
   const lines = [
-    "Olá, Willian. Gostaria de solicitar um orçamento.",
+    "Olá! Preenchi o formulário no site e gostaria de mais informações, por favor.",
     "",
     `Nome completo: ${data.nome}`,
     `WhatsApp: ${data.whatsapp}`,

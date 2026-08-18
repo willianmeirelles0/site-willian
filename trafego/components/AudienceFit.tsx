@@ -18,7 +18,8 @@ export default function AudienceFit() {
             Para quem é
           </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            A gestão de performance digital é perfeita para você que
+            A gestão de performance digital
+            <br className="hidden lg:block" /> é perfeita para você que:
           </h2>
         </FadeIn>
 
