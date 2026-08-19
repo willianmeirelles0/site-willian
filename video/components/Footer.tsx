@@ -1,5 +1,3 @@
-import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
-
 export default function Footer({
   hubUrl,
   otherPageUrl,
@@ -20,16 +18,8 @@ export default function Footer({
               Willian Meirelles
             </p>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 block text-sm text-muted transition-colors duration-200 hover:text-blue-light"
-            >
-              +55 54 99316 6996
-            </a>
-            <a
               href="mailto:videomaker@willianmeirelles.com.br"
-              className="mt-1 block text-sm text-muted transition-colors duration-200 hover:text-blue-light"
+              className="mt-2 block text-sm text-muted transition-colors duration-200 hover:text-blue-light"
             >
               videomaker@willianmeirelles.com.br
             </a>
